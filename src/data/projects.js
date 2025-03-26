@@ -5,7 +5,7 @@ const projects = [
     description:
       "This Project was built using topics of react js and HTML, CSS, JavaScript. This Project Was Shown the projects and about and contact details. This Projects was built by my Own using Grok Ai.",
     github: "https://github.com/Narasimharao7/profilito",
-    live: "https://narasimharao-profilito.netlify.app/",
+    live: "https://gundlapalli-narasimha-rao.netlify.app/",
     image:
       "https://res.cloudinary.com/dkt3zutob/image/upload/v1742976616/profilito/image5.png",
   },
