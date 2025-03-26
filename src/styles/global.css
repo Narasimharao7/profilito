@@ -84,7 +84,7 @@ body {
 .resume-content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 0.5rem;
 }
 
 .resume-item h3 {
@@ -129,6 +129,7 @@ body {
   border-radius: 5px;
   font-weight: bold;
   transition: background 0.3s ease;
+  width: 20%;
 }
 
 .download-btn:hover {
