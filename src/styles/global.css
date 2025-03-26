@@ -4,6 +4,7 @@ body {
   background: linear-gradient(to bottom, #eceff1, #cfd8dc);
 }
 
+/* Home Page */
 .home {
   padding: 2rem;
   max-width: 1200px;
@@ -20,34 +21,28 @@ body {
   color: #2c3e50;
 }
 
+.profile-section p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
 .projects-section h2,
 .courses-section h2 {
   font-size: 2rem;
   color: #2c3e50;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-.projects-grid {
+.projects-grid,
+.courses-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   gap: 2rem;
   padding: 1rem;
 }
 
-.courses-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.courses-section li {
-  background: #fff;
-  padding: 1rem;
-  margin-bottom: 0.5rem;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* About Page Styles */
+/* About Page */
 .about-page {
   padding: 2rem;
   max-width: 800px;
@@ -84,7 +79,7 @@ body {
 .resume-content {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 2rem;
 }
 
 .resume-item h3 {
@@ -108,8 +103,8 @@ body {
   font-size: 1rem;
   color: #555;
   margin-bottom: 0.5rem;
-  position: relative;
   padding-left: 1.5rem;
+  position: relative;
 }
 
 .resume-item li:before {
@@ -129,20 +124,19 @@ body {
   border-radius: 5px;
   font-weight: bold;
   transition: background 0.3s ease;
-  width: 20%;
 }
 
 .download-btn:hover {
   background: #ff6f61;
 }
 
-/* Contact Page Styles */
+/* Contact Page */
 .contact-page {
   padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
-  min-height: 59.4vh;
+  min-height: 60vh;
 }
 
 .contact-page h1 {
@@ -181,7 +175,6 @@ body {
   color: #3498db;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
 }
 
 .email-link:hover {
@@ -189,60 +182,150 @@ body {
 }
 
 .whatsapp-link {
-  color: #25d366; /* WhatsApp green */
+  color: #25d366;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
 }
 
 .whatsapp-link:hover {
   color: #ff6f61;
 }
 
-/* Course Card Styles */
-.courses-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 1rem;
+/* Responsive Design */
+
+/* Extra Small (XXS) - max-width: 480px */
+@media (max-width: 480px) {
+  .home,
+  .about-page,
+  .contact-page {
+    padding: 1rem;
+    min-height: 85vh;
+  }
+
+  .profile-section h1,
+  .about-page h1,
+  .contact-page h1 {
+    font-size: 1.8rem;
+  }
+
+  .profile-section p,
+  .intro,
+  .contact-intro {
+    font-size: 1rem;
+  }
+
+  .projects-section h2,
+  .courses-section h2,
+  .resume-section h2,
+  .contact-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .projects-grid,
+  .courses-grid {
+    grid-template-columns: 1fr; /* Single column */
+    gap: 1rem;
+  }
+
+  .resume-section,
+  .contact-section {
+    padding: 1rem;
+  }
+
+  .resume-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .resume-item p,
+  .resume-item li,
+  .contact-info p {
+    font-size: 0.9rem;
+  }
+
+  .download-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
 }
 
-.course-card {
-  background: linear-gradient(145deg, #ffffff, #f0f4f8);
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Small (XS) - max-width: 768px */
+@media (max-width: 768px) and (min-width: 481px) {
+  .home,
+  .about-page,
+  .contact-page {
+    padding: 1.5rem;
+  }
+
+  .profile-section h1,
+  .about-page h1,
+  .contact-page h1 {
+    font-size: 2rem;
+  }
+
+  .profile-section p,
+  .intro,
+  .contact-intro {
+    font-size: 1.1rem;
+  }
+
+  .projects-section h2,
+  .courses-section h2,
+  .resume-section h2,
+  .contact-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .projects-grid,
+  .courses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .resume-section,
+  .contact-section {
+    padding: 1.5rem;
+  }
 }
 
-.course-card h3 {
-  font-size: 1.3rem;
-  color: #2c3e50;
-  margin: 0;
-  padding-bottom: 0.5rem;
+/* Medium (MD) - 769px to 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .home {
+    padding: 1.5rem;
+    max-width: 900px;
+  }
+
+  .about-page,
+  .contact-page {
+    padding: 1.5rem;
+    max-width: 700px;
+  }
 }
 
-.course-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(52, 152, 219, 0.8); /* Blue overlay */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+/* Large (LG) - 1025px to 1440px */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .home {
+    max-width: 1100px;
+  }
+
+  .about-page,
+  .contact-page {
+    max-width: 750px;
+  }
 }
 
-.course-overlay span {
-  color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
+/* Extra Large (XL) - min-width: 1441px */
+@media (min-width: 1441px) {
+  .home {
+    max-width: 1300px;
+  }
+
+  .about-page,
+  .contact-page {
+    max-width: 900px;
+  }
+  /* .projects-grid,
+  .courses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+  } */
 }

@@ -37,3 +37,47 @@
   font-size: 0.9rem;
   opacity: 0.8;
 }
+
+/* Responsive Design */
+
+/* Extra Small (XXS) - max-width: 480px */
+@media (max-width: 480px) {
+  .footer {
+    padding: 1rem;
+  }
+
+  .social-links {
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .social-links a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Small (XS) - max-width: 768px */
+@media (max-width: 768px) and (min-width: 481px) {
+  .footer {
+    padding: 1.5rem;
+  }
+
+  .social-links {
+    gap: 2rem;
+  }
+
+  .social-links a {
+    width: 35px;
+    height: 35px;
+  }
+
+  .footer p {
+    font-size: 0.85rem;
+  }
+}

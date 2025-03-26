@@ -37,7 +37,7 @@ const Header = () => {
           animate={{ scale: 1 }}
           transition={{ type: "spring", stiffness: 260, damping: 20 }}
         />
-        <span>Narasimha Rao</span>
+        <span className="logo-title">Narasimha Rao</span>
       </div>
 
       {/* Hamburger Menu Button */}
