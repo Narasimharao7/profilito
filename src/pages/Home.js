@@ -7,8 +7,8 @@ import "../styles/global.css";
 const Home = () => {
   // Sample courses data
   const courses = [
-    "React Masterclass - Udemy",
-    "Node.js Essentials - Coursera",
+    "Python 100 days Course - Udemy",
+    "MERN Full Stack Course - NxtWave",
   ];
 
   return (

@@ -141,6 +141,7 @@ body {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
+  min-height: 59.4vh;
 }
 
 .contact-page h1 {
