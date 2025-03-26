@@ -33,6 +33,11 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
+.nav-link {
+  text-decoration: none;
+  color: white;
+}
+
 /* Desktop Navigation */
 .desktop-nav {
   display: flex;

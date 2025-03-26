@@ -1,15 +1,19 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom"; // For navigation
 import ProjectCard from "../components/ProjectCard";
 import CourseCard from "../components/CourseCard";
 import projects from "../data/projects";
 import "../styles/global.css";
 
 const Home = () => {
-  // Sample courses data
+  const navigate = useNavigate(); // Hook for navigation
   const courses = [
     "Python 100 days Course - Udemy",
     "MERN Full Stack Course - NxtWave",
   ];
+
+  // Limit to first 3 projects
+  const featuredProjects = projects.slice(0, 3);
 
   return (
     <motion.div
@@ -29,10 +33,19 @@ const Home = () => {
       <section className="projects-section">
         <h2>Recent Projects</h2>
         <div className="projects-grid">
-          {projects.map((project) => (
+          {featuredProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
+        <motion.button
+          className="view-more-btn"
+          onClick={() => navigate("/projects")}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          View More Projects
+        </motion.button>
       </section>
 
       <section className="courses-section">

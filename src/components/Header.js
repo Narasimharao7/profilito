@@ -28,17 +28,19 @@ const Header = () => {
       transition={{ duration: 0.5 }}
       className="header"
     >
-      <div className="logo">
-        <motion.img
-          src={logo}
-          alt="Profilito Logo"
-          className="logo-img"
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ type: "spring", stiffness: 260, damping: 20 }}
-        />
-        <span className="logo-title">Narasimha Rao</span>
-      </div>
+      <Link to="/" className="nav-link">
+        <div className="logo">
+          <motion.img
+            src={logo}
+            alt="Profilito Logo"
+            className="logo-img"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ type: "spring", stiffness: 260, damping: 20 }}
+          />
+          <span className="logo-title">Narasimha Rao</span>
+        </div>
+      </Link>
 
       {/* Hamburger Menu Button */}
       <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
