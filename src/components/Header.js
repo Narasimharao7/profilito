@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import logo from "../assets/icon.ico";
 import "../styles/header.css";
 
 const Header = () => {
@@ -18,7 +19,17 @@ const Header = () => {
       transition={{ duration: 0.5 }}
       className="header"
     >
-      <div className="logo">Profilito</div>
+      <div className="logo">
+        <motion.img
+          src={logo}
+          alt="Profilito Logo"
+          className="logo-img"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ type: "spring", stiffness: 260, damping: 20 }}
+        />
+        <span>Narasimha Rao</span>
+      </div>
       <nav>
         {navItems.map((item) => (
           <motion.div
