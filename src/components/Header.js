@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import logo from "../assets/icon.ico"; // Replace with your logo file path
+import pic from "../assets/pic.jpg"; // Replace with your logo file path
 import "../styles/header.css";
 
 const Header = () => {
@@ -31,7 +31,7 @@ const Header = () => {
       <Link to="/" className="nav-link">
         <div className="logo">
           <motion.img
-            src={logo}
+            src={pic}
             alt="Profilito Logo"
             className="logo-img"
             initial={{ scale: 0 }}
