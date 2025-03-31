@@ -14,40 +14,55 @@
 .logo {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
 }
 
 .logo-img {
   height: 40px;
   width: auto;
   border-radius: 50%;
-  transition: transform 0.3s ease;
-  margin-right: 5px;
-}
-
-.logo-img:hover {
-  transform: scale(1.1);
 }
 
 .logo-title {
-  font-size: 20px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
+/* Navigation Links */
 .nav-link {
   text-decoration: none;
   color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+.nav-link-profile {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff6f61;
+}
+
+/* Active Tab Style */
+.nav-link.active {
+  background: #ff6f61;
+  color: white;
+  font-weight: 600;
+  border-bottom: 2px solid white;
 }
 
 /* Desktop Navigation */
 .desktop-nav {
   display: flex;
-  gap: 2rem;
-}
-
-.desktop-nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
+  gap: 1.5rem;
 }
 
 /* Hamburger Menu */
@@ -84,10 +99,7 @@
   z-index: 1000;
 }
 
-.mobile-nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
+.mobile-nav .nav-link {
   font-size: 1.2rem;
 }
 
@@ -103,6 +115,10 @@
     height: 30px;
   }
 
+  .logo-title {
+    font-size: 1rem;
+  }
+
   .desktop-nav {
     display: none;
   }
@@ -116,8 +132,9 @@
     width: 200px;
   }
 
-  .mobile-nav a {
+  .mobile-nav .nav-link {
     font-size: 1rem;
+    padding: 0.4rem 0.8rem;
   }
 }
 
@@ -131,6 +148,10 @@
     height: 35px;
   }
 
+  .logo-title {
+    font-size: 1.1rem;
+  }
+
   .desktop-nav {
     display: none;
   }
@@ -142,15 +163,13 @@
   .mobile-nav {
     display: flex;
   }
+
+  .mobile-nav .nav-link {
+    font-size: 1.1rem;
+  }
 }
 
 /* Medium and Above - min-width: 769px */
 @media (min-width: 769px) {
-  .desktop-nav a:hover {
-    color: #ff6f61;
-  }
-
-  .mobile-nav a:hover {
-    color: #ff6f61;
-  }
+  /* Default styles apply */
 }

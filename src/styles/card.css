@@ -61,6 +61,52 @@
   color: #555;
   font-size: 1rem;
   line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Fallback for unsupported browsers */
+  max-height: 6em; /* Approx 4 lines at line-height: 1.5 */
+}
+
+.project-card p.expanded {
+  -webkit-line-clamp: unset;
+  max-height: none; /* Remove height restriction when expanded */
+  overflow: visible;
+}
+
+.more-btn {
+  background: #34aeff;
+  color: white;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background 0.3s ease;
+}
+
+.more-btn:hover {
+  background: #ff6f61;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background: #023835;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
 .project-links {
@@ -77,10 +123,12 @@
   background: #3498db;
   color: white;
   transition: background 0.3s ease, transform 0.2s ease;
+  flex: 1;
+  text-align: center;
 }
 
 .project-links a:hover {
-  background: #052f4b;
+  background: #ff6f61;
   transform: translateY(-2px);
 }
 
@@ -149,18 +197,30 @@
   .project-card p {
     font-size: 0.85rem;
     line-height: 1.4;
+    max-height: 4.76em; /* 4 lines at line-height: 1.4 */
+  }
+
+  .more-btn {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .project-tags {
+    gap: 0.4rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
   }
 
   .project-links {
     flex-direction: column;
     gap: 0.75rem;
-    align-items: center;
   }
 
   .project-links a {
-    padding: 0.5rem 1rem;
-    width: 90%;
-    text-align: center;
+    padding: 0.5rem;
     font-size: 0.9rem;
   }
 
@@ -187,6 +247,20 @@
 
   .project-card p {
     font-size: 0.9rem;
+    max-height: 5.4em; /* 4 lines at line-height: 1.5 */
+  }
+
+  .more-btn {
+    padding: 0.35rem 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  .project-tags {
+    gap: 0.5rem;
+  }
+
+  .tag {
+    font-size: 0.8rem;
   }
 
   .project-links {
@@ -203,5 +277,44 @@
 @media (min-width: 769px) and (max-width: 1024px) {
   .project-image {
     height: 160px;
+  }
+
+  .project-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .project-card p {
+    font-size: 0.95rem;
+    max-height: 5.7em; /* 4 lines at line-height: 1.5 */
+  }
+}
+
+/* Large (LG) - 1025px to 1440px */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  /* Default styles apply */
+}
+
+/* Extra Large (XL) - min-width: 1441px */
+@media (min-width: 1441px) {
+  .project-image {
+    height: 200px;
+  }
+
+  .project-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .project-card p {
+    font-size: 1.1rem;
+    max-height: 6.6em; /* 4 lines at line-height: 1.5 */
+  }
+
+  .more-btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .tag {
+    font-size: 0.9rem;
   }
 }
