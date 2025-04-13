@@ -55,6 +55,17 @@ const projects = [
     image:
       "https://res.cloudinary.com/dkt3zutob/image/upload/v1742977087/profilito/image4.png",
   },
+  {
+    id: 6,
+    title: "Shopping App - ShopEasy",
+    description:
+      "This Project is build with the covered topics of React js and Fake API store that can make the simple Login page, Home, Cart, and Header Pages. ",
+    github: "https://github.com/Narasimharao7/shopEasy-app",
+    tags: ["React", "HTML", "CSS", "Fake API"],
+    live: "https://shopeasyapp.netlify.app/",
+    image:
+      "https://res.cloudinary.com/dkt3zutob/image/upload/v1742977087/profilito/image6.png",
+  },
 ];
 
 export default projects;
