@@ -13,7 +13,7 @@ const Home = () => {
   ];
 
   // Limit to first 3 projects
-  const featuredProjects = projects.slice(0, 3);
+  const featuredProjects = projects.slice(-3);
 
   return (
     <motion.div
